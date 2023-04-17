@@ -9,7 +9,10 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:8080",
-    "https://minegocioconsistema.tk"
+    "https://minegocioconsistema.tk",
+    "https://list-producto-app-obmib.ondigitalocean.app",
+    "https://ondigitalocean.app/"
+    
 ]
 
 app.add_middleware(
