@@ -9,7 +9,7 @@ producto = APIRouter()
 def listar_producto():
 
     with engine.connect() as conn:
-        result = conn.execute(text("select * from dbo.producto")).fetchall()
+        result = conn.execute(text("select * from producto")).fetchall()
         conn.commit()
         listProducto = []
         for row in result:
@@ -22,7 +22,7 @@ def listar_producto():
 @producto.get("/producto/{prd_id}")
 def listar_producto(prd_id: int):
     with engine.connect() as conn:
-        result = conn.execute(text("select * from dbo.producto where  id = '"+str(prd_id)+"'")).fetchall()
+        result = conn.execute(text("select * from producto where  id = '"+str(prd_id)+"'")).fetchall()
         conn.commit()
         listProducto = []
         for row in result:
