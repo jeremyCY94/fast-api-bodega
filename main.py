@@ -11,13 +11,15 @@ origins = [
     "http://localhost:8080",
     "https://minegocioconsistema.tk",
     "https://list-producto-app-obmib.ondigitalocean.app",
-    "https://ondigitalocean.app/"
+    "https://ondigitalocean.app/",
+    "https://list-producto-app-obmib.ondigitalocean.app/",
+    "https://yatacos.store",
     
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
